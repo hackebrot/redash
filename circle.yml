@@ -16,8 +16,8 @@ dependencies:
     - npm install
     - npm run build
     - sudo apt-get -qq update && sudo apt-get -qq install --no-install-recommends -y bzip2 curl firefox
-    - bin/install-firefox.sh
-    - bin/install-geckodriver.sh
+    - sudo bin/install-firefox.sh
+    - sudo bin/install-geckodriver.sh
   cache_directories:
     - node_modules/
 test:
