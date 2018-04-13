@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
 
 set -e
-set -u
 
 if [ -z "$GECKODRIVER_VERSION" ]; then
     echo "Set GECKODRIVER_VERSION environment variable." >&2

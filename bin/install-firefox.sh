@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
 
 set -e
-set -u
 
 if [ -z "$FIREFOX_VERSION" ]; then
     echo "Set FIREFOX_VERSION environment variable." >&2
