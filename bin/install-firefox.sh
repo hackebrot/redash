@@ -8,12 +8,6 @@ if [[ -z "$FIREFOX_VERSION" ]]; then
     exit 1
 fi
 
-DEPENDENCIES=' \
-        firefox \
-    ' \
-    && set -x \
-    && apt-get -qq update && apt-get -qq install --no-install-recommends -y $DEPENDENCIES
-
 FIREFOX_DOWNLOAD_URL=https://download-installer.cdn.mozilla.net/pub/firefox/releases/$FIREFOX_VERSION/linux-x86_64/en-US/firefox-$FIREFOX_VERSION.tar.bz2 \
     && apt-get -y purge firefox \
     && rm -rf /opt/firefox \
