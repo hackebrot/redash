@@ -16,6 +16,7 @@ geckodriver --version
 # Install pip
 sudo apt-get install python-pip python-dev build-essential
 sudo pip install --upgrade pip
+sudo pip install requests
 
 sudo pip install tox mozdownload mozinstall
 
