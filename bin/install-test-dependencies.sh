@@ -1,6 +1,5 @@
 #!/bin/bash
 set -ex
-export PATH=~/project/firefox:$PATH
 
 GECKODRIVER_URL=$(
   curl -s 'https://api.github.com/repos/mozilla/geckodriver/releases/latest' |
@@ -14,11 +13,8 @@ chmod +x geckodriver
 sudo mv geckodriver /bin
 geckodriver --version
 # Install pip
-sudo apt-get install python-pip python-dev build-essential
-sudo pip install --upgrade pip
-sudo pip install requests
 
-sudo pip install tox mozdownload mozinstall
+pip install mozdownload mozinstall
 
 mkdir -p ~/project/firefox-downloads/
 find  ~/project/firefox-downloads/ -type f -mtime +90 -delete
