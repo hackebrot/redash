@@ -9,7 +9,7 @@ machine:
     PATH: "/home/ubuntu/redash/firefox:$PATH"
     DISPLAY: :99
   post:
-    - pyenv global 2.7.13
+    - pyenv global 2.7.12
 dependencies:
   override:
     - pip install --upgrade setuptools
