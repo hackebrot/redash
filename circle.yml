@@ -5,6 +5,9 @@ machine:
   node:
     version:
       6.9.1
+  environment:
+    - PATH: "/home/ubuntu/testpilot/firefox:$PATH"
+    - DISPLAY: :99
 dependencies:
   override:
     - pip install --upgrade setuptools
@@ -13,8 +16,7 @@ dependencies:
     - npm install
     - npm run build
     - sudo apt-get -qq update && sudo apt-get -qq install --no-install-recommends -y bzip2 curl firefox
-    - FIREFOX_VERSION=59.0 sudo bin/install-firefox.sh
-    - GECKODRIVER_VERSION=0.20.0 sudo bin/install-geckodriver.sh
+    - ./bin/install-test-dependencies.sh
   cache_directories:
     - node_modules/
 test:
