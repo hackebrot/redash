@@ -6,8 +6,8 @@ machine:
     version:
       6.9.1
   environment:
-    - PATH: "/home/ubuntu/redash/firefox:$PATH"
-    - DISPLAY: :99
+    PATH: "/home/ubuntu/redash/firefox:$PATH"
+    DISPLAY: :99
 dependencies:
   override:
     - pip install --upgrade setuptools
